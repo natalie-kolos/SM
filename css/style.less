@@ -339,6 +339,18 @@ h6 {
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);
+    z-index: -1;
+  }
 
 }
 
@@ -347,6 +359,28 @@ h6 {
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 88%, rgba(255, 255, 255, 1) 88%, rgba(255, 255, 255, 1) 100%);
+    z-index: -1;
+  }
+
+  .section-title-block {
+    .section-title {
+      color: @white;
+    }
+
+    hr {
+      border-color: @white;
+    }
+  }
 }
 
 .subtitle-muted {
@@ -375,6 +409,7 @@ h6 {
 .list-branded-wrap {
   padding: 32px;
   background-color: @white;
+  box-shadow: 0px 4px 27px 0px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -436,6 +471,7 @@ h6 {
 
     @media @breakpoint-tablet-min {
       font-size: 56px;
+      margin-bottom: 24px;
     }
   }
 }
@@ -467,7 +503,7 @@ h6 {
 
 }
 
-.testimonial-block{
+.testimonial-block {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -476,12 +512,101 @@ h6 {
   text-align: center;
   margin-bottom: 16px;
 
-h5{
-  color: @primary;
-  margin-bottom: 4px;
+  h5 {
+    color: @primary;
+    margin-bottom: 4px;
+  }
+
+  .img-feather {
+    width: 44px;
+    height: 44px;
+  }
 }
-.img-feather{
-  width: 44px;
-  height: 44px;
+
+.cta-wrap {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 32px;
+
+  @media @breakpoint-tablet {
+    flex-direction: column;
+  }
+
+  .cta-block {
+    border-right: 1px solid @white;
+    text-align: center;
+    padding: 12px 44px;
+    width: 100%;
+
+    @media @breakpoint-tablet {
+      border-right: 0;
+      border-bottom: 1px solid @white;
+      padding: 44px;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+
+    .cta-block__title {
+      color: @gray-600;
+      font-family: @font-secondary;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.7;
+      text-transform: capitalize;
+    }
+  }
 }
+
+.form-custom {
+  padding: 32px;
+  background-color: @white;
+  box-shadow: 0px 4px 27px 0px rgba(0, 0, 0, 0.08);
+
+  .form-control {
+    border: 0;
+    border-bottom: 1px solid @primary;
+    border-radius: 0;
+    color: @gray-900;
+    font-family: @font-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.32px;
+  }
+
+  .form-floating {
+    label {
+      color: @gray-300;
+      font-family: @font-primary;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: 0.32px;
+    }
+  }
+}
+
+.location-block-wrap {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid #C3BAA9;
+
+  .location-block {
+    color: @secondary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.7;
+  }
 }
