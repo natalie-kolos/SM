@@ -183,66 +183,76 @@ h6 {
     padding: 24px 0;
   }
 
-  .navbar-collapse {
-    justify-content: center;
 
-    .navbar-nav {
-      width: 100%;
-      justify-content: space-between;
 
-      .nav-item {
-        .nav-link {
-          color: @text-primary-light;
-          font-family: @font-secondary;
 
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          letter-spacing: 2.56px;
-          text-transform: uppercase;
+  .navbar-nav {
+    width: 100%;
+    justify-content: space-between;
 
-          @media @breakpoint-tablet {
-            font-size: 14px;
-          }
+    .nav-item {
+      .nav-link {
+        color: @text-primary-light;
+        font-family: @font-secondary;
 
-          @media @breakpoint-tablet-min {
-            font-size: 12px;
-          }
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.56px;
+        text-transform: uppercase;
 
-          @media @breakpoint-desktop {
-            font-size: 16px;
-          }
+        @media @breakpoint-tablet {
+          font-size: 14px;
+        }
 
-          span {
-            color: @primary-dark;
-          }
+        @media @breakpoint-tablet-min {
+          font-size: 12px;
+        }
 
-          &.active {
-            color: @primary-dark;
-          }
+        @media @breakpoint-desktop {
+          font-size: 16px;
+        }
 
-          &.nav-link__featured {
-            color: @primary-dark;
-            text-decoration: underline;
-          }
+        span {
+          color: @primary-dark;
+        }
 
-          &.nav-link__feather {
-            position: relative;
+        &.active {
+          color: @primary-dark;
+        }
 
-            &::before {
-              content: "";
-              width: 24px;
-              height: 24px;
-              background-image: url(../img/icon-feather.svg);
-              background-repeat: no-repeat;
-              position: absolute;
-              background-size: contain;
-              top: -16px;
-              left: 42%;
-            }
+        &.nav-link__featured {
+          color: @primary-dark;
+          text-decoration: underline;
+        }
+
+        &.nav-link__feather {
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-image: url(../img/icon-feather.svg);
+            background-repeat: no-repeat;
+            position: absolute;
+            background-size: contain;
+            top: -16px;
+            left: 42%;
           }
         }
       }
+    }
+  }
+
+}
+
+.navbar-footer {
+  .navbar-nav__wrap {
+    border: 0;
+    .navbar-brand{
+      padding: 16px;
+      padding-bottom: 0;
     }
   }
 }
