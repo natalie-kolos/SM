@@ -672,3 +672,66 @@ s .btn-custom.btn-custom-text:hover {
   font-weight: 300;
   line-height: 1.7;
 }
+.testimonial-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  max-height: 6em;
+  line-height: 1.5em;
+}
+.testimonial-text.full {
+  -webkit-line-clamp: unset;
+  max-height: none;
+}
+.read-less-btn {
+  display: none;
+}
+.show-less .read-more-btn {
+  display: none;
+}
+.show-less .read-less-btn {
+  display: inline;
+}
+.pagination {
+  --bs-pagination-padding-x: 1rem;
+  --bs-pagination-padding-y: 0.5rem;
+  --bs-pagination-font-size: 1.2rem;
+  --bs-pagination-color: #DAB777;
+  --bs-pagination-bg: transparent;
+  --bs-pagination-border-color: #DAB777;
+  --bs-pagination-border-radius: 0;
+  --bs-pagination-hover-color: #DAB777;
+  --bs-pagination-hover-bg: #DAB777;
+  --bs-pagination-active-bg: #DAB777;
+  --bs-pagination-active-color: #DAB777;
+  --bs-pagination-active-border-color: #DAB777;
+}
+.pagination li {
+  margin-right: 0.5rem;
+}
+.pagination li a {
+  color: #DAB777;
+  padding: 0.5rem 1rem;
+  border: 1px solid #DAB777;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+}
+.pagination li a:hover {
+  background-color: #2e2b2b;
+  color: #DAB777;
+  border-color: #2e2b2b;
+}
+.pagination .active a {
+  background-color: #2e2b2b;
+  color: #DAB777;
+  border-color: #2e2b2b;
+}
+.pagination .disabled a {
+  color: #706B60;
+  background-color: #706B60;
+  border-color: #706B60;
+}

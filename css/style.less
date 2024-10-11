@@ -839,3 +839,87 @@ h6 {
     }
   }
 }
+
+.testimonial-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4; // Ограничиваем текст 4 строками
+  max-height: 6em; // Устанавливаем максимальную высоту для 4 строк
+  line-height: 1.5em; // Высота строки
+
+  &.full {
+      -webkit-line-clamp: unset; // Показываем весь текст при разворачивании
+      max-height: none; // Убираем ограничение по высоте
+  }
+}
+
+.read-less-btn {
+  display: none; // Скрываем кнопку "Read Less" по умолчанию
+}
+
+.show-less {
+  .read-more-btn {
+      display: none; // Скрываем кнопку "Read More", если текст развернут
+  }
+
+  .read-less-btn {
+      display: inline; // Показываем кнопку "Read Less", если текст развернут
+  }
+}
+
+.pagination {
+  // Переопределяем переменные Bootstrap
+  --bs-pagination-padding-x: 1rem; // Изменяем горизонтальные отступы
+  --bs-pagination-padding-y: 0.5rem; // Изменяем вертикальные отступы
+  --bs-pagination-font-size: 1.2rem; // Изменяем размер шрифта
+  --bs-pagination-color: @primary; // Цвет текста (например, используем переменную для основного цвета)
+  --bs-pagination-bg: transparent; // Фоновые цвета для страниц
+  --bs-pagination-border-color: @primary; // Цвет границ
+  --bs-pagination-border-radius: 0; // Радиус скругления границ
+  --bs-pagination-hover-color: @primary; // Цвет текста при наведении
+  --bs-pagination-hover-bg: @primary; // Фон при наведении
+  --bs-pagination-active-bg: @primary; // Фон активной страницы
+  --bs-pagination-active-color: @primary; // Цвет текста активной страницы
+  --bs-pagination-active-border-color: @primary; // Граница активной страницы
+
+  // При необходимости, вы можете добавить дополнительные стили для конкретных элементов пагинации:
+  li {
+      margin-right: 0.5rem; // Отступы между элементами пагинации
+
+      a {
+          color: @primary; // Цвет ссылок
+          padding: 0.5rem 1rem; // Отступы для ссылок
+          border: 1px solid @primary; // Границы ссылок
+          border-radius: 0; // Скругление углов
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 400;
+
+          &:hover {
+            background-color: @secondary; // Фон активного элемента
+            color: @primary; // Цвет текста активного элемента
+            border-color: @secondary; // Граница активного элемента
+          }
+      }
+  }
+
+  // Стили для активного элемента
+  .active {
+      a {
+          background-color: @secondary; // Фон активного элемента
+          color: @primary; // Цвет текста активного элемента
+          border-color: @secondary; // Граница активного элемента
+      }
+  }
+
+  // Стили для отключенного элемента
+  .disabled {
+      a {
+          color: @gray-300; // Цвет текста для отключенной ссылки
+          background-color: @gray-300; // Фон отключенной ссылки
+          border-color: @gray-300; // Границы отключенной ссылки
+      }
+  }
+}

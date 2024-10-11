@@ -76,4 +76,33 @@ $('.carousel-three-items').slick({
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+    readMoreButtons.forEach(function (button) {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const target = this.getAttribute('data-target');
+            const descriptionBlock = document.querySelectorAll('.testimonial-text')[target - 1];
+            
+            if (descriptionBlock.classList.contains('full')) {
+                descriptionBlock.classList.remove('full');
+                descriptionBlock.style.maxHeight = '6em'; // Вернуть высоту для короткого текста
+                this.textContent = 'Read More';
+            } else {
+                descriptionBlock.classList.add('full');
+                descriptionBlock.style.maxHeight = 'none'; // Убираем ограничение по высоте
+                this.textContent = 'Read Less';
+            }
+        });
+    });
+
+    // Изначально показываем сокращенный текст для всех блоков
+    const descriptionBlocks = document.querySelectorAll('.testimonial-text');
+    descriptionBlocks.forEach(function (block) {
+        block.style.maxHeight = '6em'; // Ограничиваем высоту для первых 4 строк
+    });
+});
+
 
