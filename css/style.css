@@ -91,16 +91,18 @@ h6 {
 .btn-custom.btn-custom__outline__secondary:hover {
   opacity: 0.8;
 }
-.btn-custom .btn-custom-text {
-  font-weight: 700;
+.btn-custom.btn-custom-text {
+  font-weight: 500;
   font-size: 16px;
   padding: 0;
+  color: "IvyPresto Headline", sans-serif;
+  font-family: "IvyPresto Headline", sans-serif;
 }
-.btn-custom .btn-custom-text:hover {
+s .btn-custom.btn-custom-text:hover {
   border: 0;
   opacity: 0.8;
 }
-.btn-custom .btn-custom-text:active {
+.btn-custom.btn-custom-text:active {
   border: 0;
 }
 .btn-outline-light .bi-search::before {
@@ -143,11 +145,21 @@ h6 {
 .navbar-custom .navbar-nav__wrap {
   border-top: 1px solid #C3BAA9;
   width: 100%;
+}
+.navbar-custom .navbar-nav__wrap .navbar-collapse {
   padding: 24px 0;
+  text-align: center;
 }
 .navbar-custom .navbar-nav {
   width: 100%;
   justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .navbar-custom .navbar-nav {
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
 }
 .navbar-custom .navbar-nav .nav-item .nav-link {
   color: #42403B;
@@ -207,6 +219,12 @@ h6 {
 }
 .navbar-footer .navbar-nav {
   align-items: center;
+}
+@media (max-width: 991px) {
+  .navbar-footer .navbar-nav {
+    gap: 20px;
+    padding: 20px 0;
+  }
 }
 .hero-image {
   position: relative;
@@ -603,4 +621,54 @@ h6 {
 #menu-about .service-item.active a {
   color: #2e2b2b;
   border-bottom: 1px solid #2e2b2b;
+}
+.section-shuffle h2 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.72px;
+}
+.section-shuffle h4 {
+  color: #000;
+  font-family: "Calmetta", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 2.56px;
+  text-transform: uppercase;
+}
+.section-shuffle .section-shuffle-block__description {
+  padding: 0 24px;
+}
+.section-shuffle .row {
+  align-items: center;
+}
+.section-shuffle .section-shuffle-block {
+  padding: 56px 0;
+}
+.section-shuffle .section-shuffle-block:nth-child(even) .row {
+  flex-direction: row-reverse;
+}
+.testimonials-page .testimonial-page-block {
+  background-color: #F9F9F9;
+  padding: 32px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 44px;
+}
+.testimonials-page .testimonial-page-block:before {
+  content: url(../img/icon-feather.svg);
+  position: absolute;
+  left: 50%;
+  top: -24px;
+}
+.testimonials-page .testimonial-page-block h4 {
+  color: #C9A054;
+  font-family: "IvyPresto Headline", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.7;
 }
