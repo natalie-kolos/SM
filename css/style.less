@@ -850,8 +850,8 @@ h6 {
   line-height: 1.5em; // Высота строки
 
   &.full {
-      -webkit-line-clamp: unset; // Показываем весь текст при разворачивании
-      max-height: none; // Убираем ограничение по высоте
+    -webkit-line-clamp: unset; // Показываем весь текст при разворачивании
+    max-height: none; // Убираем ограничение по высоте
   }
 }
 
@@ -861,11 +861,11 @@ h6 {
 
 .show-less {
   .read-more-btn {
-      display: none; // Скрываем кнопку "Read More", если текст развернут
+    display: none; // Скрываем кнопку "Read More", если текст развернут
   }
 
   .read-less-btn {
-      display: inline; // Показываем кнопку "Read Less", если текст развернут
+    display: inline; // Показываем кнопку "Read Less", если текст развернут
   }
 }
 
@@ -886,40 +886,63 @@ h6 {
 
   // При необходимости, вы можете добавить дополнительные стили для конкретных элементов пагинации:
   li {
-      margin-right: 0.5rem; // Отступы между элементами пагинации
+    margin-right: 0.5rem; // Отступы между элементами пагинации
 
-      a {
-          color: @primary; // Цвет ссылок
-          padding: 0.5rem 1rem; // Отступы для ссылок
-          border: 1px solid @primary; // Границы ссылок
-          border-radius: 0; // Скругление углов
-          text-transform: uppercase;
-          font-size: 14px;
-          font-weight: 400;
+    a {
+      color: @primary; // Цвет ссылок
+      padding: 0.5rem 1rem; // Отступы для ссылок
+      border: 1px solid @primary; // Границы ссылок
+      border-radius: 0; // Скругление углов
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 400;
 
-          &:hover {
-            background-color: @secondary; // Фон активного элемента
-            color: @primary; // Цвет текста активного элемента
-            border-color: @secondary; // Граница активного элемента
-          }
+      &:hover {
+        background-color: @secondary; // Фон активного элемента
+        color: @primary; // Цвет текста активного элемента
+        border-color: @secondary; // Граница активного элемента
       }
+    }
   }
 
   // Стили для активного элемента
   .active {
-      a {
-          background-color: @secondary; // Фон активного элемента
-          color: @primary; // Цвет текста активного элемента
-          border-color: @secondary; // Граница активного элемента
-      }
+    a {
+      background-color: @secondary; // Фон активного элемента
+      color: @primary; // Цвет текста активного элемента
+      border-color: @secondary; // Граница активного элемента
+    }
   }
 
   // Стили для отключенного элемента
   .disabled {
-      a {
-          color: @gray-300; // Цвет текста для отключенной ссылки
-          background-color: @gray-300; // Фон отключенной ссылки
-          border-color: @gray-300; // Границы отключенной ссылки
-      }
+    a {
+      color: @gray-300; // Цвет текста для отключенной ссылки
+      background-color: @gray-300; // Фон отключенной ссылки
+      border-color: @gray-300; // Границы отключенной ссылки
+    }
   }
+}
+#accordionFAQ{
+
+
+.accordion-button {
+  padding: 16px;
+  color: @primary;
+  font-family: @font-secondary;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+}
+
+.accordion-button:not(.collapsed) {
+  color: @primary;
+  background-color: @secondary;
+  box-shadow: none;
+  padding: 16px;
+}
 }

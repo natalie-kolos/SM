@@ -735,3 +735,20 @@ s .btn-custom.btn-custom-text:hover {
   background-color: #706B60;
   border-color: #706B60;
 }
+#accordionFAQ .accordion-button {
+  padding: 16px;
+  color: #DAB777;
+  font-family: "Calmetta", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#accordionFAQ .accordion-button:not(.collapsed) {
+  color: #DAB777;
+  background-color: #2e2b2b;
+  box-shadow: none;
+  padding: 16px;
+}
