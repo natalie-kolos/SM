@@ -160,6 +160,10 @@ h6 {
   padding: 48px 0;
 }
 
+.bg-neutral {
+  background-color: @neutral;
+}
+
 .navbar-custom {
   flex-direction: column;
   justify-content: center;
@@ -286,11 +290,15 @@ h6 {
 .hero-image {
   position: relative;
 
+
+
   .hero-image__description {
     position: absolute;
     bottom: 5%;
     width: 60%;
     left: 20%;
+
+
 
     @media @breakpoint-tablet-min {
       bottom: 8%;
@@ -310,6 +318,8 @@ h6 {
       letter-spacing: 1.12px;
       margin-bottom: 16px;
 
+      
+
       @media @breakpoint-tablet-min {
         font-size: 38px;
         margin-bottom: 24px;
@@ -321,6 +331,11 @@ h6 {
       }
     }
 
+    h2{
+      color: #F4F1EC;
+      text-align: center;
+    }
+
     hr {
       width: 20%;
       color: #DDBC82;
@@ -328,6 +343,24 @@ h6 {
       text-align: center;
       margin-left: 40%;
 
+    }
+  }
+
+  &.hero-image-additional {
+    text-align: center;
+
+    h1 {
+      margin-bottom: 4px;
+    }
+
+    h2 {
+      color: @primary;
+      font-size: 36px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.72px;
+      margin-bottom: 24px;
     }
   }
 }
@@ -548,7 +581,7 @@ h6 {
   gap: 24px;
   padding: 24px;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 16px;s
 
   h5 {
     color: @primary;
@@ -837,6 +870,15 @@ h6 {
       font-weight: 300;
       line-height: 1.7;
     }
+    .subtitle {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.7;
+      letter-spacing: 2.56px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
   }
 }
 
@@ -923,26 +965,167 @@ h6 {
     }
   }
 }
-#accordionFAQ{
+
+#accordionFAQ {
 
 
-.accordion-button {
-  padding: 16px;
-  color: @primary;
-  font-family: @font-secondary;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.7;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  .accordion-button {
+    padding: 16px;
+    color: @primary;
+    font-family: @font-secondary;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: @primary;
+    background-color: @secondary;
+    box-shadow: none;
+    padding: 16px;
+  }
 }
 
-.accordion-button:not(.collapsed) {
-  color: @primary;
-  background-color: @secondary;
-  box-shadow: none;
-  padding: 16px;
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.4px;
+  }
 }
+
+.contact-form {
+  margin-bottom: 44px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 80%, @neutral 80%, @neutral 100%);
+    z-index: -1;
+  }
+}
+
+.form-select {
+  border: 0;
+  border-bottom: 1px solid @primary;
+  border-radius: 0;
+  font-family: @font-primary;
+}
+
+.blog-block {
+  margin-bottom: 32px;
+
+  .blog-block__description {
+    h4 {
+      color: @gray-300;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.32px;
+    }
+
+    h2 {
+      color: @gray-900;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.56px;
+    }
+
+    .category {
+      color: @primary;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.24px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.tags {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+
+  li {
+    a {
+      color: @primary;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.24px;
+      text-transform: uppercase;
+      border: 1px solid @primary;
+      padding: 4px 8px;
+    }
+  }
+}
+
+.text-page{
+  ul {
+    list-style-type: none; // Убираем стандартные маркеры
+
+    li {
+        position: relative;
+        padding-left: 20px; // Отступ для маркера
+        margin-bottom: 16px;
+
+        &::before {
+            content: ''; // Вставляем пустое содержимое для маркера
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px; // Размер точки
+            height: 8px; // Размер точки
+            background-color: @primary; // Золотой цвет точки
+            border-radius: 50%; // Делаем маркер круглым
+        }
+    }
+}
+
+blockquote{
+  background-color: @neutral;
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  margin: 24px 0;
+  &:before {
+    content: url(../img/quote.svg);
+    position: absolute;
+    left: 50%;
+    top: -12px;
+}
+  h5{
+    color: @primary;
+    font-size: 16px;
+  }
+}
+}
+
+.blog-info{
+  border-top: 1px solid @primary;
+  padding-top: 24px;
 }
