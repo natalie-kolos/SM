@@ -318,7 +318,7 @@ h6 {
       letter-spacing: 1.12px;
       margin-bottom: 16px;
 
-      
+
 
       @media @breakpoint-tablet-min {
         font-size: 38px;
@@ -331,7 +331,7 @@ h6 {
       }
     }
 
-    h2{
+    h2 {
       color: #F4F1EC;
       text-align: center;
     }
@@ -581,9 +581,9 @@ h6 {
   gap: 24px;
   padding: 24px;
   text-align: center;
-  margin-bottom: 16px;s
+  margin-bottom: 16px;
 
-  h5 {
+  s h5 {
     color: @primary;
     margin-bottom: 4px;
   }
@@ -737,6 +737,8 @@ h6 {
 
 
 .carousel-services {
+  position: relative;
+
   @media @breakpoint-tablet {
     display: none;
   }
@@ -870,6 +872,7 @@ h6 {
       font-weight: 300;
       line-height: 1.7;
     }
+
     .subtitle {
       font-size: 16px;
       font-style: normal;
@@ -943,6 +946,21 @@ h6 {
         background-color: @secondary; // Фон активного элемента
         color: @primary; // Цвет текста активного элемента
         border-color: @secondary; // Граница активного элемента
+      }
+
+      .page-item {
+        &.active {
+          span {
+            color: @gray-600;
+            padding: 0.5rem 1rem;
+            border: 1px solid @gray-600;
+            border-radius: 0;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 400;
+            background-color: @white;
+          }
+        }
       }
     }
   }
@@ -1083,49 +1101,51 @@ h6 {
   }
 }
 
-.text-page{
+.text-page {
   ul {
     list-style-type: none; // Убираем стандартные маркеры
 
     li {
-        position: relative;
-        padding-left: 20px; // Отступ для маркера
-        margin-bottom: 16px;
+      position: relative;
+      padding-left: 20px; // Отступ для маркера
+      margin-bottom: 16px;
 
-        &::before {
-            content: ''; // Вставляем пустое содержимое для маркера
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 8px; // Размер точки
-            height: 8px; // Размер точки
-            background-color: @primary; // Золотой цвет точки
-            border-radius: 50%; // Делаем маркер круглым
-        }
+      &::before {
+        content: ''; // Вставляем пустое содержимое для маркера
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px; // Размер точки
+        height: 8px; // Размер точки
+        background-color: @primary; // Золотой цвет точки
+        border-radius: 50%; // Делаем маркер круглым
+      }
     }
-}
+  }
 
-blockquote{
-  background-color: @neutral;
-  padding: 24px;
-  text-align: center;
-  position: relative;
-  margin: 24px 0;
-  &:before {
-    content: url(../img/quote.svg);
-    position: absolute;
-    left: 50%;
-    top: -12px;
-}
-  h5{
-    color: @primary;
-    font-size: 16px;
+  blockquote {
+    background-color: @neutral;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    margin: 24px 0;
+
+    &:before {
+      content: url(../img/quote.svg);
+      position: absolute;
+      left: 50%;
+      top: -12px;
+    }
+
+    h5 {
+      color: @primary;
+      font-size: 16px;
+    }
   }
 }
-}
 
-.blog-info{
+.blog-info {
   border-top: 1px solid @primary;
   padding-top: 24px;
 }
