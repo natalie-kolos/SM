@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/hxz0yqq.css");
 body {
-  font-family: "Calmetta", sans-serif;
+  font-family: 'Calmetta', sans-serif;
 }
 p {
   line-height: 1.8;
@@ -21,7 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "IvyPresto Headline", sans-serif;
+  font-family: 'IvyPresto Headline', sans-serif;
   font-weight: 400;
 }
 .container-fluid-custom {
@@ -38,7 +38,7 @@ h6 {
   padding: 5px 18px 7px 18px;
   border-radius: 0;
   transition: all 0.4s ease-in-out;
-  font-family: "IvyPresto Headline", sans-serif;
+  font-family: 'IvyPresto Headline', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
@@ -95,8 +95,8 @@ h6 {
   font-weight: 500;
   font-size: 16px;
   padding: 0;
-  color: "IvyPresto Headline", sans-serif;
-  font-family: "IvyPresto Headline", sans-serif;
+  color: 'IvyPresto Headline', sans-serif;
+  font-family: 'IvyPresto Headline', sans-serif;
 }
 s .btn-custom.btn-custom-text:hover {
   border: 0;
@@ -166,7 +166,7 @@ s .btn-custom.btn-custom-text:hover {
 }
 .navbar-custom .navbar-nav .nav-item .nav-link {
   color: #42403B;
-  font-family: "Calmetta", sans-serif;
+  font-family: 'Calmetta', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -371,7 +371,7 @@ s .btn-custom.btn-custom-text:hover {
 }
 .subtitle-muted {
   color: #706B60;
-  font-family: "Calmetta", sans-serif;
+  font-family: 'Calmetta', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -414,7 +414,7 @@ s .btn-custom.btn-custom-text:hover {
 }
 .section-class-apart .carousel-one-item__block h4 {
   color: #42403B;
-  font-family: "Calmetta", sans-serif;
+  font-family: 'Calmetta', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -449,7 +449,7 @@ s .btn-custom.btn-custom-text:hover {
 }
 .blog-item .blog-item__title {
   color: #42403B;
-  font-family: "Calmetta", sans-serif;
+  font-family: 'Calmetta', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -510,7 +510,7 @@ s .btn-custom.btn-custom-text:hover {
 }
 .cta-wrap .cta-block .cta-block__title {
   color: #42403B;
-  font-family: "Calmetta", sans-serif;
+  font-family: 'Calmetta', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -527,7 +527,7 @@ s .btn-custom.btn-custom-text:hover {
   border-bottom: 1px solid #DAB777;
   border-radius: 0;
   color: #2e2b2b;
-  font-family: "IvyPresto Headline", sans-serif;
+  font-family: 'IvyPresto Headline', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -536,7 +536,7 @@ s .btn-custom.btn-custom-text:hover {
 }
 .form-custom .form-floating label {
   color: #706B60;
-  font-family: "IvyPresto Headline", sans-serif;
+  font-family: 'IvyPresto Headline', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -656,7 +656,7 @@ s .btn-custom.btn-custom-text:hover {
 }
 .section-shuffle h4 {
   color: #000;
-  font-family: "Calmetta", sans-serif;
+  font-family: 'Calmetta', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -691,7 +691,7 @@ s .btn-custom.btn-custom-text:hover {
 }
 .testimonials-page .testimonial-page-block h4 {
   color: #C9A054;
-  font-family: "IvyPresto Headline", sans-serif;
+  font-family: 'IvyPresto Headline', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -782,7 +782,7 @@ s .btn-custom.btn-custom-text:hover {
 #accordionFAQ .accordion-button {
   padding: 16px;
   color: #DAB777;
-  font-family: "Calmetta", sans-serif;
+  font-family: 'Calmetta', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -828,7 +828,7 @@ s .btn-custom.btn-custom-text:hover {
   border: 0;
   border-bottom: 1px solid #DAB777;
   border-radius: 0;
-  font-family: "IvyPresto Headline", sans-serif;
+  font-family: 'IvyPresto Headline', sans-serif;
 }
 .blog-block {
   margin-bottom: 32px;
